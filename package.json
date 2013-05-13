@@ -1,0 +1,24 @@
+{
+  "name": "trac-jsonrpc-client",
+  "description": "trac jsonrpc api client with proxy object.",
+  "keywords": [
+    "Trac",
+    "jsonrpc",
+    "api"
+  ],
+  "version": "0.1.0",
+  "author": {
+    "name": "jerome creignou",
+    "url": "https://github.com/jcreigno/trac-jsonrpc-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcreigno/trac-jsonrpc-client.git"
+  },
+  "main": "./json-rpc.js",
+  "dependencies": {
+    "request": "~2.21.0",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {}
+}
