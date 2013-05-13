@@ -40,3 +40,12 @@ Using proxy client :
     });
   });
 ```
+If authentification is required you need to specify a `username` and `password` :
+
+```javascript
+  var jsonrpc = require('../json-rpc');
+  var cli = new jsonrpc('http://trac-host/trac/env/login/rpc', {
+    auth:{username:'tracuser',password:'hehehe'}
+  });
+
+```
