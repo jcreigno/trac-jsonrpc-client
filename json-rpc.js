@@ -43,14 +43,14 @@ Jsonrpc.prototype.callRpc = function(method, params, callback){
             if(err){
                 callback(err, null);
             }else{
-                callback(data.error, data, data.result);
+                callback(data.error, data.result);
             }
         });
 };
 
 Jsonrpc.prototype.proxy = function(callback){
     var self = this;
-    self.callRpc('system.listMethods',[], function (err, data, result){
+    self.callRpc('system.listMethods',[], function (err, result){
         console.log
         if(err){
             console.log('unable to build proxy ' + err);
