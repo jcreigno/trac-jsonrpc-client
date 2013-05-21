@@ -40,10 +40,13 @@ Jsonrpc.prototype.callRpc = function(method, params, callback){
              'params':params,
              'id':new Date().getTime()})
         }, function(err, res, data){
-            if(err){
-                callback(err, null);
+            var error = err || data.error
+            if(error){
+                error.method = method;
+                error.params = params;
+                callback(error, null);
             }else{
-                callback(data.error, data.result);
+                callback(null, data.result);
             }
         });
 };
